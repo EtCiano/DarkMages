@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ckapnesoei3lg"]
+
+[ext_resource type="PackedScene" uid="uid://bxpsvl2xpgih3" path="res://scenes/mago_personagem.tscn" id="1_o5qli"]
+
+[node name="Main" type="Node2D" unique_id=2079876658]
+
+[node name="magoPersonagem" parent="." unique_id=1957062652 instance=ExtResource("1_o5qli")]
+position = Vector2(160, 90)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1527842232]
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=753896771]
+z_index = -2
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 328.0
+offset_bottom = 184.0
+color = Color(0.26293245, 0.26293245, 0.26293245, 1)

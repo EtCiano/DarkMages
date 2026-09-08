@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bks6mjt6klqr2"]
+
+[ext_resource type="Shader" uid="uid://c6cepcajybfv5" path="res://shaders/mago_personagem.gdshader" id="1_trjuc"]
+
+[resource]
+shader = ExtResource("1_trjuc")
+shader_parameter/corClasse = Vector4(0, 0, 0, 0)
