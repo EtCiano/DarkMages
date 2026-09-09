@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cxvn4cpsthqa7"]
+
+[ext_resource type="Script" uid="uid://bxhh3eg8y7pvs" path="res://scripts/scriptsAtaques/hitbox.gd" id="1_y22nh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gawio"]
+
+[node name="hitbox" type="CollisionShape2D" unique_id=740677471]
+shape = SubResource("CapsuleShape2D_gawio")
+script = ExtResource("1_y22nh")

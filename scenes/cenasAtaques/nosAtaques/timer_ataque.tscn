@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://clunti1fs366e"]
+
+[ext_resource type="Script" uid="uid://y8rhephg8yjd" path="res://scripts/scriptsAtaques/timer_ataque.gd" id="1_x6y4l"]
+
+[node name="TimerAtaque" type="Timer" unique_id=1023507128]
+one_shot = true
+script = ExtResource("1_x6y4l")

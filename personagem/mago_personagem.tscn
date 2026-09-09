@@ -1,85 +1,86 @@
 [gd_scene format=3 uid="uid://bxpsvl2xpgih3"]
 
-[ext_resource type="Script" uid="uid://b00gl20k8nrj7" path="res://scripts/mago_personagem.gd" id="1_p6uyu"]
-[ext_resource type="Texture2D" uid="uid://c8l3vem1m7q5u" path="res://sprites/magoParado.png" id="2_cy721"]
-[ext_resource type="Texture2D" uid="uid://cp8nprbpu13ok" path="res://sprites/magoAndando.png" id="2_n6fvj"]
+[ext_resource type="Script" uid="uid://b00gl20k8nrj7" path="res://personagem/personagemScript.gd" id="1_h18es"]
 [ext_resource type="Material" uid="uid://bks6mjt6klqr2" path="res://shaders/personagem_shader.tres" id="2_tuqmp"]
+[ext_resource type="Texture2D" uid="uid://cp8nprbpu13ok" path="res://personagem/magoAndando.png" id="3_h18es"]
+[ext_resource type="Texture2D" uid="uid://c8l3vem1m7q5u" path="res://personagem/magoParado.png" id="4_ewjkx"]
 [ext_resource type="Material" uid="uid://j3ig1la7n558" path="res://shaders/shaderPixelado.tres" id="5_tuqmp"]
+[ext_resource type="Script" uid="uid://cmvxwwipx4e6n" path="res://personagem/personagemInfo.gd" id="6_ewjkx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ufaak"]
 radius = 18.0
 height = 60.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cy721"]
-atlas = ExtResource("2_n6fvj")
+atlas = ExtResource("3_h18es")
 region = Rect2(0, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1kf4a"]
-atlas = ExtResource("2_n6fvj")
+atlas = ExtResource("3_h18es")
 region = Rect2(72, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5rbgt"]
-atlas = ExtResource("2_n6fvj")
+atlas = ExtResource("3_h18es")
 region = Rect2(144, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aunn8"]
-atlas = ExtResource("2_n6fvj")
+atlas = ExtResource("3_h18es")
 region = Rect2(216, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_foxh4"]
-atlas = ExtResource("2_n6fvj")
+atlas = ExtResource("3_h18es")
 region = Rect2(288, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3dd2"]
-atlas = ExtResource("2_n6fvj")
+atlas = ExtResource("3_h18es")
 region = Rect2(360, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cghww"]
-atlas = ExtResource("2_n6fvj")
+atlas = ExtResource("3_h18es")
 region = Rect2(432, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xras7"]
-atlas = ExtResource("2_n6fvj")
+atlas = ExtResource("3_h18es")
 region = Rect2(504, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_laysk"]
-atlas = ExtResource("2_n6fvj")
+atlas = ExtResource("3_h18es")
 region = Rect2(576, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_542pg"]
-atlas = ExtResource("2_n6fvj")
+atlas = ExtResource("3_h18es")
 region = Rect2(648, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n6fvj"]
-atlas = ExtResource("2_cy721")
+atlas = ExtResource("4_ewjkx")
 region = Rect2(0, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuqmp"]
-atlas = ExtResource("2_cy721")
+atlas = ExtResource("4_ewjkx")
 region = Rect2(72, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2b6dv"]
-atlas = ExtResource("2_cy721")
+atlas = ExtResource("4_ewjkx")
 region = Rect2(144, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a0m6q"]
-atlas = ExtResource("2_cy721")
+atlas = ExtResource("4_ewjkx")
 region = Rect2(216, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cw5nk"]
-atlas = ExtResource("2_cy721")
+atlas = ExtResource("4_ewjkx")
 region = Rect2(288, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_140js"]
-atlas = ExtResource("2_cy721")
+atlas = ExtResource("4_ewjkx")
 region = Rect2(360, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t3sqb"]
-atlas = ExtResource("2_cy721")
+atlas = ExtResource("4_ewjkx")
 region = Rect2(432, 0, 72, 72)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qywcq"]
-atlas = ExtResource("2_cy721")
+atlas = ExtResource("4_ewjkx")
 region = Rect2(504, 0, 72, 72)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g6aal"]
@@ -160,7 +161,7 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.9391304, 0.49130434)
 
 [node name="magoPersonagem" type="CharacterBody2D" unique_id=1957062652]
-script = ExtResource("1_p6uyu")
+script = ExtResource("1_h18es")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1019773012]
 position = Vector2(4, 2)
@@ -169,11 +170,10 @@ shape = SubResource("CapsuleShape2D_ufaak")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=255291727]
 material = ExtResource("2_tuqmp")
 sprite_frames = SubResource("SpriteFrames_g6aal")
-animation = &"parado"
+animation = &"andando"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2110768391]
 scale = Vector2(2, 2)
-zoom = Vector2(10, 10)
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=974659737]
 z_index = -1
@@ -181,3 +181,15 @@ material = ExtResource("5_tuqmp")
 scale = Vector2(4, 4)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_g6177")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=1483822280]
+
+[node name="CollisionShade2D" type="CollisionShape2D" parent="hitbox" unique_id=923696427]
+position = Vector2(4, 2)
+shape = SubResource("CapsuleShape2D_ufaak")
+
+[node name="atributosPersonagem" type="Node" parent="." unique_id=22830311]
+script = ExtResource("6_ewjkx")
+
+[connection signal="hit" from="." to="atributosPersonagem" method="_levarDano"]
+[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp8nprbpu13ok"
-path="res://.godot/imported/magoAndando.png-a905b1b1e2723ecf8b6f012cdfe28ff6.ctex"
+uid="uid://c8l3vem1m7q5u"
+path="res://.godot/imported/magoParado.png-a127a54af473ed89b7938d7d99ed7a11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/magoAndando.png"
-dest_files=["res://.godot/imported/magoAndando.png-a905b1b1e2723ecf8b6f012cdfe28ff6.ctex"]
+source_file="res://personagem/magoParado.png"
+dest_files=["res://.godot/imported/magoParado.png-a127a54af473ed89b7938d7d99ed7a11.ctex"]
 
 [params]
 

@@ -1,6 +1,8 @@
 extends CharacterBody2D
 const SPEED = 300.0
 
+signal hit(dano: float)
+
 func _physics_process(delta: float) -> void:
 	var directionX := Input.get_axis("esquerda", "direita")
 	if directionX:
@@ -27,11 +29,16 @@ func _ready() -> void:
 	$AnimatedSprite2D.play()
 	var corClasse = Color(1.0, 1.0, 1.0, 1.0)
 	
-	match PersonagemInfo.classe_jogador:
-		PersonagemInfo.classe.FEITICEIRO:
+	match Global.classe_jogador:
+		Global.classe.FEITICEIRO:
 			corClasse = Color(0.0, 0.55, 1.0, 1.0)
-		PersonagemInfo.classe.CLERIGO:
+		Global.classe.CLERIGO:
 			corClasse = Color(0.897, 0.833, 0.388, 1.0)
-		PersonagemInfo.classe.OCULTISTA:
+		Global.classe.OCULTISTA:
 			corClasse = Color(0.471, 0.0, 0.0, 1.0)
 	$AnimatedSprite2D.material.set_shader_parameter("corClasse", corClasse)
+
+
+
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	hit.emit(10.0)
