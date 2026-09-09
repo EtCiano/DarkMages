@@ -5,3 +5,5 @@
 [node name="TimerAtaque" type="Timer" unique_id=1023507128]
 one_shot = true
 script = ExtResource("1_x6y4l")
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]

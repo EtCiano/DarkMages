@@ -6,7 +6,7 @@ extends CollisionShape2D
 @export var raio: float 	 # para circulos e capsulas
 @export var altura: float 	 # para capsulas
 
-@export var posicao: Vector2
+@export var posicao: Vector2 = Vector2(0.0, 0.0)
 
 func definir() -> void:
 	match forma:
@@ -18,4 +18,5 @@ func definir() -> void:
 			forma.radius = raio
 			forma.height = altura
 	
+	$CollisionShape2D.shape = forma
 	position = posicao

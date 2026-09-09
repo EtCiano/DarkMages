@@ -1,15 +1,14 @@
-Node
 CollisionShape2D
 Area2D
+TextureRect
+Node
 Sprite2D
 GPUParticles2D
 Timer
 ColorRect
-TextureRect
 PointLight2D
 DirectionalLight2D
 CanvasModulate
 Polygon2D
 Camera2D
 AnimatedSprite2D
-CharacterBody2D

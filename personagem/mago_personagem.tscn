@@ -164,13 +164,15 @@ fill_to = Vector2(0.9391304, 0.49130434)
 script = ExtResource("1_h18es")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1019773012]
+visible = false
 position = Vector2(4, 2)
 shape = SubResource("CapsuleShape2D_ufaak")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=255291727]
 material = ExtResource("2_tuqmp")
 sprite_frames = SubResource("SpriteFrames_g6aal")
-animation = &"andando"
+animation = &"parado"
+frame_progress = 0.041356776
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2110768391]
 scale = Vector2(2, 2)
@@ -185,6 +187,7 @@ texture = SubResource("GradientTexture2D_g6177")
 [node name="hitbox" type="Area2D" parent="." unique_id=1483822280]
 
 [node name="CollisionShade2D" type="CollisionShape2D" parent="hitbox" unique_id=923696427]
+visible = false
 position = Vector2(4, 2)
 shape = SubResource("CapsuleShape2D_ufaak")
 
