@@ -1,7 +1,7 @@
 extends CharacterBody2D
 const SPEED = 300.0
 
-signal hit(dano: float)
+signal hit(hitbox: Area2D)
 
 @onready var personagemInfo = get_node("atributosPersonagem")
 
@@ -27,6 +27,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _ready() -> void:
+	
+	$hitbox.area_entered.connect(_on_hitbox_area_entered)
+	
 	$AnimatedSprite2D.animation = "parado"
 	$AnimatedSprite2D.play()
 	var corClasse = Color(1.0, 1.0, 1.0, 1.0)
@@ -42,5 +45,5 @@ func _ready() -> void:
 			corClasse = Color(0.471, 0.0, 0.0, 1.0)
 	$AnimatedSprite2D.material.set_shader_parameter("corClasse", corClasse)
 
-func _on_hitbox_area_entered(area: Area2D) -> void:
-	hit.emit(10.0)
+func _on_hitbox_area_entered(hitBox: Area2D) -> void:
+	hit.emit(hitBox)

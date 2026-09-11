@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c8mqc08j4vgm3"]
+
+[ext_resource type="Script" uid="uid://cso8522sfhjf0" path="res://scripts/inimigo.gd" id="1_61lki"]
+[ext_resource type="PackedScene" uid="uid://cxvn4cpsthqa7" path="res://scenes/nosAtaques/hitbox.tscn" id="2_21tsg"]
+[ext_resource type="Script" uid="uid://k6oaavsbobi8" path="res://scripts/info_inimigo.gd" id="3_21tsg"]
+
+[node name="inimigo" type="CharacterBody2D" unique_id=237545213]
+script = ExtResource("1_61lki")
+
+[node name="hitbox" parent="." unique_id=1006829968 instance=ExtResource("2_21tsg")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1329740619]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1162551029]
+
+[node name="infoInimigo" type="Node" parent="." unique_id=318530446]
+script = ExtResource("3_21tsg")

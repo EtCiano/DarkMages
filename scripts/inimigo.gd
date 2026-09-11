@@ -1,4 +1,6 @@
-extends Area2D
+extends CharacterBody2D
+
+signal hit(hitbox: Area2D)
 
 @export var forma: Shape2D
 
@@ -8,9 +10,10 @@ extends Area2D
 
 @export var dano: float
 
-@export var posicao: Vector2 = Vector2(0.0, 0.0)
+@export var origem: Global.entidade = Global.entidade.INIMIGO
 
-@export var origem: Global.entidade = Global.entidade.PLAYER
+func _ready() -> void:
+	$hitbox.area_entered.connect(_on_hitbox_area_entered)
 
 func definir() -> void:
 	match forma:
@@ -23,4 +26,8 @@ func definir() -> void:
 			forma.height = altura
 	
 	$CollisionShape2D.shape = forma
-	position = posicao
+	$hitbox/CollisionShape2D.shape = forma
+	
+
+func _on_hitbox_area_entered(hitBox: Area2D) -> void:
+	hit.emit(hitBox)

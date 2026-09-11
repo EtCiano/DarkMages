@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://2k3c1vbij7j1"]
+
+[ext_resource type="Script" uid="uid://c7mb60onulvqd" path="res://scripts/dummy.gd" id="1_6m2ry"]
+[ext_resource type="Material" uid="uid://j3ig1la7n558" path="res://shaders/shaderPixelado.tres" id="2_fva3d"]
+[ext_resource type="PackedScene" uid="uid://c8mqc08j4vgm3" path="res://scenes/inimigo.tscn" id="2_w4gkx"]
+
+[sub_resource type="Gradient" id="Gradient_n6fvj"]
+offsets = PackedFloat32Array(0.46385542, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_v72lb"]
+gradient = SubResource("Gradient_n6fvj")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9391304, 0.49130434)
+
+[node name="dummy" type="Node2D" unique_id=249683865]
+script = ExtResource("1_6m2ry")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1620219866]
+visible = false
+z_index = -1
+material = ExtResource("2_fva3d")
+scale = Vector2(4, 4)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_v72lb")
+
+[node name="inimigo" parent="." unique_id=237545213 instance=ExtResource("2_w4gkx")]

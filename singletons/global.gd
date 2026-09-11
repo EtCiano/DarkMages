@@ -4,6 +4,7 @@ const pixelSize: float = 4.0
 
 enum classe {FEITICEIRO, CLERIGO, OCULTISTA}
 enum entidade {PLAYER, INIMIGO}
+enum status {VIVO, MORTO}
 	
 func aplicar_modificacoes(no_alvo: Node, propriedades: Dictionary) -> void:
 	if not is_instance_valid(no_alvo):
