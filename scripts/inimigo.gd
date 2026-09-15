@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 signal hit(hitbox: Area2D)
 
+@export var nome: String
+
 @export var forma: Shape2D
 
 @export var tamanho: Vector2 # para retangulo
@@ -10,10 +12,9 @@ signal hit(hitbox: Area2D)
 
 @export var dano: float
 
-@export var origem: Global.entidade = Global.entidade.INIMIGO
-
 func _ready() -> void:
 	$hitbox.area_entered.connect(_on_hitbox_area_entered)
+	$hitbox.origem = Global.entidade.INIMIGO
 
 func definir() -> void:
 	match forma:

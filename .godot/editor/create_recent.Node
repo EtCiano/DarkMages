@@ -1,3 +1,6 @@
+Timer
+Container
+Label
 Node
 CollisionShape2D
 Sprite2D
@@ -5,10 +8,7 @@ CharacterBody2D
 Area2D
 TextureRect
 GPUParticles2D
-Timer
 ColorRect
 PointLight2D
 DirectionalLight2D
 CanvasModulate
-Polygon2D
-Camera2D

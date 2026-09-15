@@ -10,7 +10,7 @@ extends Area2D
 
 @export var posicao: Vector2 = Vector2(0.0, 0.0)
 
-@export var origem: Global.entidade = Global.entidade.PLAYER
+@export var origem: Global.entidade
 
 func definir() -> void:
 	match forma:

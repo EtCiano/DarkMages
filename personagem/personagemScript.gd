@@ -29,6 +29,7 @@ func _physics_process(delta: float) -> void:
 func _ready() -> void:
 	
 	$hitbox.area_entered.connect(_on_hitbox_area_entered)
+	$hitbox.origem = Global.entidade.PLAYER
 	
 	$AnimatedSprite2D.animation = "parado"
 	$AnimatedSprite2D.play()

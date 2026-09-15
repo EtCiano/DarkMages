@@ -10,3 +10,4 @@ func definir() -> void:
 	material = shaderMaterial
 	position = posicao
 	scale = tamanho
+	
