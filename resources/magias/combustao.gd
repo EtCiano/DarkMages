@@ -26,8 +26,4 @@ func conjurar():
 	
 	timer.tempo = 2.0
 	timer.definir()
-	#timer.timeout.connect(acabar.bind(nodeAtaque))
-	
-	
-	
-	# TODO: Adicionar os nós para os ataques (hitbox, particula, projétil, etc) no estilo do jujutsu shenanigans 😭 
+	#timer.timeout.connect(acabar.bind(nodeAtaque)) 
