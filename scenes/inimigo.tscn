@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cso8522sfhjf0" path="res://scripts/inimigo.gd" id="1_61lki"]
 [ext_resource type="PackedScene" uid="uid://cxvn4cpsthqa7" path="res://scenes/nosAtaques/hitbox.tscn" id="2_21tsg"]
-[ext_resource type="Script" uid="uid://k6oaavsbobi8" path="res://scripts/info_inimigo.gd" id="3_21tsg"]
+[ext_resource type="Script" uid="uid://k6oaavsbobi8" path="res://scripts/infoInimigo.gd" id="3_21tsg"]
 
 [node name="inimigo" type="CharacterBody2D" unique_id=237545213]
 script = ExtResource("1_61lki")

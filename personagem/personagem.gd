@@ -6,6 +6,13 @@ signal hit(hitbox: Area2D)
 @onready var personagemInfo = get_node("atributosPersonagem")
 
 func _physics_process(delta: float) -> void:
+	calcularMovimento()
+	
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("Ataque1"):
+		personagemInfo.ataques[0].new(position)
+
+func calcularMovimento() -> void:
 	var directionX := Input.get_axis("esquerda", "direita")
 	if directionX:
 		velocity.x = directionX * SPEED

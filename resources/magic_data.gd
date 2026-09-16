@@ -18,6 +18,7 @@ var cenaAtaque = preload("res://scenes/ataque.tscn")
 
 var cenaAtual = Engine.get_main_loop() as SceneTree
 var nodeAtaque: Node
+var posicaoPesonagem: Vector2
 
 func _init() -> void:
 	nodeAtaque = cenaAtaque.instantiate()

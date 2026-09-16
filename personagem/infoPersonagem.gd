@@ -6,6 +6,7 @@ var vida = 100.0
 var tipoEntidade = Global.entidade.PLAYER
 var status = Global.status.MORTO
 var personagemNode: Node
+var ataques: Array = [combustao]
 
 func _ready() -> void:
 	personagemNode = get_node('.')

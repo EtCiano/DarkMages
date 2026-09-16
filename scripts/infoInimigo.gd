@@ -9,7 +9,7 @@ var inimigoNode: Node
 
 func _ready() -> void:
 	inimigoNode = get_node('.')
-	get_node(".").hit.connect(_levarDano)
+	get_node("..").hit.connect(_levarDano)
 	
 func _levarDano(hitBox: Area2D) -> void:
 	if hitBox.origem != tipoEntidade:
