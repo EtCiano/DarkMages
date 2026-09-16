@@ -17,4 +17,4 @@ func _levarDano(hitBox: Area2D) -> void:
 		Global.showDamage(inimigoNode, $Sprite2D, hitBox.dano)
 		if vida <= 0:
 			status = Global.status.MORTO
-			print('Morreu o minino lindio')
+			get_node("..").queue_free()
