@@ -6,8 +6,12 @@
 font_color = Color(1, 0, 0.011764706, 1)
 
 [node name="damageShower" type="Label" unique_id=1661653190]
-offset_right = 40.0
-offset_bottom = 23.0
+z_index = 10
+anchors_preset = -1
+anchor_right = 0.047000002
+anchor_bottom = 0.048
+offset_right = -0.13800049
+offset_bottom = -0.040000916
 pivot_offset = Vector2(20, 23)
 text = "XX"
 label_settings = SubResource("LabelSettings_g6aal")

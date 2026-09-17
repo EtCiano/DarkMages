@@ -9,6 +9,7 @@
 position = Vector2(160, 90)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1527842232]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="dummy" parent="." unique_id=249683865 instance=ExtResource("2_0wfyh")]

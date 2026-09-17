@@ -1,5 +1,6 @@
 extends CharacterBody2D
 const SPEED = 300.0
+var direcao: int
 
 signal hit(hitbox: Area2D)
 
@@ -10,10 +11,12 @@ func _physics_process(delta: float) -> void:
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Ataque1"):
-		personagemInfo.ataques[0].new(position)
+		personagemInfo.ataques[0].new(position, direcao)
 
 func calcularMovimento() -> void:
-	var directionX := Input.get_axis("esquerda", "direita")
+	var directionX = Input.get_axis("esquerda", "direita")
+	if directionX != 0:
+		direcao = directionX
 	if directionX:
 		velocity.x = directionX * SPEED
 		$AnimatedSprite2D.animation = "andando"

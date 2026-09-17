@@ -1,13 +1,8 @@
 res://personagem/mago_personagem.tscn
+res://shaders/fogo.gdshader
+res://shaders/shaderFogo.tres
+res://resources/radialGradient.tres
 res://shaders/mago_personagem.gdshader
 res://shaders/shaderPixelado.gdshader
-res://scenes/inimigo.tscn
-res://scenes/main.tscn
-res://personagem/infoPersonagem.gd
-res://personagem/personagem.gd
-res://resources/magic_data.gd
-res://scripts/infoInimigo.gd
 res://resources/magias/combustao.gd
-res://scenes/nosAtaques/timer_ataque.tscn
-res://scripts/scriptsAtaques/timer_ataque.gd
-res://scenes/nosAtaques/visual.tscn
+res://scripts/scriptsAtaques/hitbox.gd

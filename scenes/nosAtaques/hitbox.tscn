@@ -6,3 +6,5 @@
 script = ExtResource("1_y22nh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1478792167]
+
+[connection signal="draw" from="CollisionShape2D" to="." method="_on_collision_shape_2d_draw"]

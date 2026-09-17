@@ -14,7 +14,7 @@ func _ready() -> void:
 func _levarDano(hitBox: Area2D) -> void:
 	if hitBox.origem != tipoEntidade:
 		vida -= hitBox.dano
-		Global.showDamage(inimigoNode, $Sprite2D, hitBox.dano)
+		Global.showDamage(inimigoNode, get_node("../Sprite2D"), hitBox.dano)
 		if vida <= 0:
 			status = Global.status.MORTO
 			get_node("..").queue_free()

@@ -1,0 +1,23 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://fd3md01tfxur"]
+
+[ext_resource type="Shader" uid="uid://qmahw86p3v8s" path="res://shaders/fogo.gdshader" id="1_vaiua"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_i32vl"]
+noise_type = 2
+frequency = 0.0048
+fractal_type = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xw33c"]
+noise = SubResource("FastNoiseLite_i32vl")
+seamless = true
+
+[resource]
+shader = ExtResource("1_vaiua")
+shader_parameter/texturaRuido = SubResource("NoiseTexture2D_xw33c")
+shader_parameter/ativarRuido = true
+shader_parameter/animar = true
+shader_parameter/suavidade = 0.70000001043084
+shader_parameter/velocidadeAndar = 0.45999998971808
+shader_parameter/corRuido = Color(0.9490196, 0.6117647, 0, 1)
+shader_parameter/corMain = Color(1, 0.101960786, 0, 1)
+shader_parameter/limite = 0.75999998301248

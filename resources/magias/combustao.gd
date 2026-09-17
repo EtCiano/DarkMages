@@ -1,9 +1,10 @@
 class_name combustao
 extends magicData
 
-func _init(personagemPos) -> void:
+func _init(personagemPos, personagemDirecao) -> void:
 	super()
 	posicaoPesonagem = personagemPos
+	direcaoPersonagem = personagemDirecao
 	custoMana = 20.0
 	danoBase = 20.0
 	espacosUsados = 1
@@ -11,19 +12,18 @@ func _init(personagemPos) -> void:
 	conjurar()
 	
 func conjurar():
-	nodeAtaque.position = Vector2(posicaoPesonagem.x+50, posicaoPesonagem.y)
+	nodeAtaque.position = Vector2(posicaoPesonagem.x+(50*direcaoPersonagem), posicaoPesonagem.y)
 	var hitbox = adicionarFuncao(funcoesAtaques['hitbox'])
 	var visual = adicionarFuncao(funcoesAtaques['visual'])
 	var timer = adicionarFuncao(funcoesAtaques['timer'])
 	
 	hitbox.dano = danoBase
 	hitbox.forma = CircleShape2D.new()
-	hitbox.raio = 10.0
+	hitbox.forma.radius = 64
 	hitbox.definir()
 	
-	visual.textura = load("res://icon.svg")
-	visual.definir()
+	visual.texture = load("res://resources/radialGradient.tres")
+	visual.material = load("res://shaders/shaderFogo.tres")
 	
-	timer.tempo = 2.0
-	timer.definir()
+	timer.start(1.0)
 	#timer.timeout.connect(acabar.bind(nodeAtaque)) 

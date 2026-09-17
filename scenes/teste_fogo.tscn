@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://csl2hkgnxbyu"]
+
+[ext_resource type="Material" uid="uid://fd3md01tfxur" path="res://shaders/shaderFogo.tres" id="1_xw33c"]
+[ext_resource type="Texture2D" uid="uid://cmchvqoc8qnco" path="res://resources/radialGradient.tres" id="2_i32vl"]
+
+[node name="testeFogo" type="TextureRect" unique_id=608474612]
+material = ExtResource("1_xw33c")
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_i32vl")

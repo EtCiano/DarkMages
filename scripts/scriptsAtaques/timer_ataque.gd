@@ -1,9 +1,4 @@
 extends Timer
-
-@export var tempo: float
-
-func definir() -> void:
-	start(tempo)
 	
 func _on_timeout() -> void:
 	get_node("..").queue_free()

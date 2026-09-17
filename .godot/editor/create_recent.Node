@@ -1,14 +1,14 @@
+TextureRect
+Sprite2D
+DirectionalLight2D
 Timer
 Container
 Label
 Node
 CollisionShape2D
-Sprite2D
 CharacterBody2D
 Area2D
-TextureRect
 GPUParticles2D
 ColorRect
 PointLight2D
-DirectionalLight2D
 CanvasModulate
