@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bitsndqjpek03"]
+
+[ext_resource type="Script" uid="uid://dctcof386ihh" path="res://scripts/scriptsAtaques/projetil.gd" id="1_htb02"]
+
+[node name="projetil" type="Area2D" unique_id=577175410]
+script = ExtResource("1_htb02")

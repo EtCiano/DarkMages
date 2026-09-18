@@ -1,8 +1,15 @@
-res://personagem/mago_personagem.tscn
+res://scenes/teste_fogo.tscn
 res://shaders/fogo.gdshader
 res://shaders/shaderFogo.tres
 res://resources/radialGradient.tres
 res://shaders/mago_personagem.gdshader
 res://shaders/shaderPixelado.gdshader
+res://scripts/scriptsAtaques/projetil.gd
+res://scenes/nosAtaques/projetil.tscn
 res://resources/magias/combustao.gd
-res://scripts/scriptsAtaques/hitbox.gd
+res://scenes/nosAtaques/hitbox.tscn
+res://resources/magic_data.gd
+res://scenes/nosAtaques/visual_combustao.tscn
+res://personagem/infoPersonagem.gd
+res://personagem/personagem.gd
+res://personagem/mago_personagem.tscn

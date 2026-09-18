@@ -4,7 +4,8 @@ extends Resource
 var funcoesAtaques = {
 	'hitbox': preload("res://scenes/nosAtaques/hitbox.tscn"),
 	'timer': preload("res://scenes/nosAtaques/timer_ataque.tscn"),
-	'visual': preload("res://scenes/nosAtaques/visual.tscn")
+	'visual': preload("res://scenes/nosAtaques/visual.tscn"),
+	'visualCombustao': preload("res://scenes/nosAtaques/visual_combustao.tscn")
 }
 
 var custoMana: float
@@ -12,6 +13,7 @@ var danoBase: float
 var espacosUsados: int
 var classeUsada: Global.classe
 var tempoTotal: float
+var cooldown: float
 var conjurador: Global.entidade
 
 var cenaAtaque = preload("res://scenes/ataque.tscn")

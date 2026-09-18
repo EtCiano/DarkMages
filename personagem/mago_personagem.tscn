@@ -188,4 +188,18 @@ script = ExtResource("6_ewjkx")
 
 [node name="hitbox" parent="." unique_id=1006829968 instance=ExtResource("7_5kbdr")]
 
+[node name="timers" type="Node" parent="." unique_id=1797393608]
+
+[node name="timerAtaque4" type="Timer" parent="timers" unique_id=833883916]
+one_shot = true
+
+[node name="timerAtaque3" type="Timer" parent="timers" unique_id=1415847291]
+one_shot = true
+
+[node name="timerAtaque2" type="Timer" parent="timers" unique_id=1379041325]
+one_shot = true
+
+[node name="timerAtaque1" type="Timer" parent="timers" unique_id=2137421107]
+one_shot = true
+
 [connection signal="hit" from="." to="atributosPersonagem" method="_levarDano"]
