@@ -1,7 +1,4 @@
 [gd_scene format=3 uid="uid://c3x6pklcabds2"]
 
-[ext_resource type="Script" uid="uid://bwdquxqi514w7" path="res://scripts/scriptsAtaques/visual.gd" id="1_wbsbg"]
-
 [node name="visual" type="Sprite2D" unique_id=1288074636]
 z_index = -5
-script = ExtResource("1_wbsbg")

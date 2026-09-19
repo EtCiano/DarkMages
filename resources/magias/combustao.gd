@@ -18,14 +18,14 @@ func conjurar():
 	var visual = adicionarFuncao(funcoesAtaques['visualCombustao'])
 	var timer = adicionarFuncao(funcoesAtaques['timer'])
 	
+	var noiseShader = visual.material.get_shader_parameter("texturaRuido").noise
+	noiseShader.seed = randi()
+	visual.get_node("AnimationPlayer").play("default")
+	
 	hitbox.dano = danoBase
 	hitbox.forma = CircleShape2D.new()
 	hitbox.forma.radius = 64
 	hitbox.definir()
-	
-	var noiseShader = visual.material.get_shader_parameter("texturaRuido").noise
-	noiseShader.seed = randi()
-	visual.get_node("AnimationPlayer").play("default")
 	
 	timer.start(1.0)
 	#timer.timeout.connect(acabar.bind(nodeAtaque)) 

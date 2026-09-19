@@ -1,6 +1,6 @@
+AnimationPlayer
 Node
 Timer
-AnimationPlayer
 Area2D
 StaticBody2D
 TextureRect

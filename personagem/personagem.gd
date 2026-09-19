@@ -1,6 +1,6 @@
 extends CharacterBody2D
 const SPEED = 300.0
-var direcao: int
+var direcao: float
 
 signal hit(hitbox: Area2D)
 
@@ -11,7 +11,6 @@ func _physics_process(delta: float) -> void:
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Ataque1"):
-		var t = $timers/timerAtaque1
 		if $timers/timerAtaque1.is_stopped():
 			var direcaoAtaque = -1 if $AnimatedSprite2D.flip_h else +1
 			var ataque = personagemInfo.ataques[0].new(position, direcaoAtaque)

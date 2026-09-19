@@ -5,6 +5,62 @@
 [sub_resource type="LabelSettings" id="LabelSettings_g6aal"]
 font_color = Color(1, 0, 0.011764706, 1)
 
+[sub_resource type="Animation" id="Animation_8x5v4"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_transform_scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.4, -0.25, 0, 0.33333334, -0.04876998, 1, -0.00016666668, -0.10000001, 0, 0),
+"times": PackedFloat32Array(0, 0.001)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset_transform_scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.4, -0.25, 0, 0.25, 0, 1, -0.00016666668, -0.10000001, 0, 0),
+"times": PackedFloat32Array(0, 0.001)
+}
+
+[sub_resource type="Animation" id="Animation_f4irg"]
+resource_name = "default"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_transform_scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0.4, -0.25, 0, 0.25, 0, 1, -0.23333332, 0.0027811527, 0, 0, 0.3, -0.19999999, 0.6643132, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset_transform_scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0.4, -0.25, 0, 0.25, 0, 1, -0.23333332, 0.0027811527, 0, 0, 0.3, -0.23333335, 0.70278114, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w4cpb"]
+_data = {
+&"RESET": SubResource("Animation_8x5v4"),
+&"default": SubResource("Animation_f4irg")
+}
+
 [node name="damageShower" type="Label" unique_id=1661653190]
 z_index = 10
 anchors_preset = -1
@@ -13,13 +69,19 @@ anchor_bottom = 0.048
 offset_right = -0.13800049
 offset_bottom = -0.040000916
 pivot_offset = Vector2(20, 23)
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.4, 0.4)
 text = "XX"
 label_settings = SubResource("LabelSettings_g6aal")
 horizontal_alignment = 1
+vertical_alignment = 2
 script = ExtResource("1_8x5v4")
 
 [node name="Timer" type="Timer" parent="." unique_id=373825531]
 one_shot = true
 autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1782826165]
+libraries/ = SubResource("AnimationLibrary_w4cpb")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timeout"]
