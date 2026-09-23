@@ -7,13 +7,14 @@ uniform float velocidadeAndar : hint_range(0.0, 5.0, 0.01) = 0.1;
 uniform vec4 corRuido : source_color = vec4(0.6, 0.5, 1.0, 1.0);
 uniform vec4 corMain : source_color = vec4(0.5, 0.4, 0.9, 1.0);
 uniform float limite : hint_range(0.0, 1.0, 0.01);
+uniform vec2 direcaoFogo = vec2(1.0, 1.0);
 
 void fragment() {
     vec4 corOriginal = texture(TEXTURE, UV);
 	vec2 uvAnimada;
 	
 	if (animar) {
-		uvAnimada = fract(UV + vec2(TIME * velocidadeAndar * 0.5, TIME * velocidadeAndar));
+		uvAnimada = fract(UV + vec2(TIME * velocidadeAndar, TIME * velocidadeAndar) * direcaoFogo);
 	} else {
 		uvAnimada = fract(UV + vec2(velocidadeAndar, velocidadeAndar * 0.5));	
 	}

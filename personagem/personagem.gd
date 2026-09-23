@@ -12,8 +12,7 @@ func _physics_process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Ataque1"):
 		if $timers/timerAtaque1.is_stopped():
-			var direcaoAtaque = -1 if $AnimatedSprite2D.flip_h else +1
-			var ataque = personagemInfo.ataques[0].new(position, direcaoAtaque)
+			var ataque = personagemInfo.ataques[0].new(global_position, get_global_mouse_position())
 			$timers/timerAtaque1.start(ataque.cooldown)
 
 func calcularMovimento() -> void:

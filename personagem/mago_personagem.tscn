@@ -205,3 +205,5 @@ one_shot = true
 one_shot = true
 
 [connection signal="hit" from="." to="atributosPersonagem" method="_levarDano"]
+[connection signal="draw" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_draw"]
+[connection signal="draw" from="AnimatedSprite2D" to="AnimatedSprite2D" method="_on_draw"]

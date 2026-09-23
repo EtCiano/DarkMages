@@ -1,19 +1,31 @@
 class_name combustao
 extends magicData
 
-func _init(personagemPos, personagemDirecao) -> void:
+var posMouse: Vector2
+var distancia: float
+var anguloMouse: float
+
+func _init(personagemPos, mousePos) -> void:
 	super()
+	posMouse = mousePos
 	posicaoPesonagem = personagemPos
-	direcaoPersonagem = personagemDirecao
 	custoMana = 20.0
-	danoBase = 20.0
 	espacosUsados = 1
 	danoBase = 10.0
 	cooldown = 1.0
+	distancia = 100.0
+	anguloMouse = atan2(
+		posMouse.y - posicaoPesonagem.y,
+		posMouse.x - posicaoPesonagem.x
+	)
 	conjurar()
 	
 func conjurar():
-	nodeAtaque.position = Vector2(posicaoPesonagem.x+(100*direcaoPersonagem), posicaoPesonagem.y)
+	nodeAtaque.global_position = Vector2(
+		posicaoPesonagem.x+(distancia*cos(anguloMouse)), 
+		posicaoPesonagem.y+(distancia*sin(anguloMouse))
+		)
+	print(anguloMouse, posMouse, posicaoPesonagem)
 	var hitbox = adicionarFuncao(funcoesAtaques['hitbox'])
 	var visual = adicionarFuncao(funcoesAtaques['visualCombustao'])
 	var timer = adicionarFuncao(funcoesAtaques['timer'])

@@ -1,10 +1,10 @@
+Sprite2D
 AnimationPlayer
 Node
 Timer
 Area2D
 StaticBody2D
 TextureRect
-Sprite2D
 DirectionalLight2D
 Container
 Label
