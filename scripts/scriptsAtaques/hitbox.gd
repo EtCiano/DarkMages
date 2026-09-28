@@ -2,9 +2,6 @@ extends Area2D
 
 @export var forma: Shape2D
 
-@export var tamanho: Vector2 # para retangulo
-@export var raio: float 	 # para circulos e capsulas
-@export var altura: float 	 # para capsulas
 @export var posicao: Vector2 = Vector2(0.0, 0.0)
 
 @export var dano: float

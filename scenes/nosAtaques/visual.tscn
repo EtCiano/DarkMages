@@ -1,4 +1,0 @@
-[gd_scene format=3 uid="uid://c3x6pklcabds2"]
-
-[node name="visual" type="Sprite2D" unique_id=1288074636]
-z_index = -5

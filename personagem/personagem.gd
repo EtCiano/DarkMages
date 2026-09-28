@@ -12,8 +12,13 @@ func _physics_process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Ataque1"):
 		if $timers/timerAtaque1.is_stopped():
-			var ataque = personagemInfo.ataques[0].new(global_position, get_global_mouse_position())
-			$timers/timerAtaque1.start(ataque.cooldown)
+			conjurarAtaque(0)
+
+func conjurarAtaque(indice: int) -> void:
+	var ataque = personagemInfo.ataques[indice].instantiate()
+	get_tree().current_scene.add_child(ataque)
+	ataque.conjurar(global_position, get_global_mouse_position())
+	$timers/timerAtaque1.start(ataque.cooldown)
 
 func calcularMovimento() -> void:
 	var directionX = Input.get_axis("esquerda", "direita")
