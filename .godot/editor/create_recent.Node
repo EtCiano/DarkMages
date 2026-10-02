@@ -1,3 +1,4 @@
+CanvasGroup
 Node2D
 GPUParticles2D
 CPUParticles2D
@@ -12,4 +13,3 @@ DirectionalLight2D
 Container
 Label
 CollisionShape2D
-CharacterBody2D

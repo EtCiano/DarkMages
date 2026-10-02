@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bgomrsyy2avw8"]
+
+[ext_resource type="Shader" uid="uid://oea3vd51yj1b" path="res://shaders/fogo_particula.gdshader" id="1_gqxb7"]
+
+[resource]
+shader = ExtResource("1_gqxb7")

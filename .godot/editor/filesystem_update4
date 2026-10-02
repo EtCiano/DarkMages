@@ -1,8 +1,6 @@
+res://shaders/fogo_particula.tres
 res://scenes/ataques/combustao/combustao.tscn
-res://shaders/fogo.gdshader
 res://shaders/shaderFogo.tres
-res://resources/radialGradient.tres
-res://shaders/mago_personagem.gdshader
-res://shaders/shaderPixelado.gdshader
-res://scenes/ataques/combustao/visual_combustao.tscn
 res://shaders/shaderFogoPaticula.tres
+res://shaders/fogo_particula.gdshader
+res://fogoShaderParticula.tres
