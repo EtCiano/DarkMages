@@ -2,5 +2,24 @@
 
 [ext_resource type="Shader" uid="uid://oea3vd51yj1b" path="res://shaders/fogo_particula.gdshader" id="1_gqxb7"]
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_particula"]
+noise_type = 2
+frequency = 0.0054
+fractal_type = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_particula"]
+noise = SubResource("FastNoiseLite_particula")
+seamless = true
+
 [resource]
 shader = ExtResource("1_gqxb7")
+shader_parameter/texturaRuido = SubResource("NoiseTexture2D_particula")
+shader_parameter/ativarRuido = true
+shader_parameter/animar = true
+shader_parameter/suavidade = 0.60000000894072
+shader_parameter/velocidadeAndar = 0.50999998860048
+shader_parameter/corRuido = Color(0.9490196, 0.6117647, 0, 1)
+shader_parameter/corMain = Color(1, 0.101960786, 0, 1)
+shader_parameter/limite = 0.68999998457712
+shader_parameter/direcaoFogo = Vector2(1, 1)
+shader_parameter/escalaRuido = 0.004

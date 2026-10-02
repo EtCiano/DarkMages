@@ -5,10 +5,52 @@
 [ext_resource type="PackedScene" uid="uid://cxvn4cpsthqa7" path="res://scenes/nosAtaques/hitbox.tscn" id="3_hitbox"]
 [ext_resource type="PackedScene" uid="uid://clh31pgmocq6c" path="res://scenes/ataques/combustao/visual_combustao.tscn" id="4_visual"]
 [ext_resource type="PackedScene" uid="uid://clunti1fs366e" path="res://scenes/nosAtaques/timer_ataque.tscn" id="5_timer"]
-[ext_resource type="Material" uid="uid://bgomrsyy2avw8" path="res://fogoShaderParticula.tres" id="6_7oujp"]
+[ext_resource type="Shader" uid="uid://qmahw86p3v8s" path="res://shaders/fogo.gdshader" id="6_7oujp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_combustao"]
 radius = 64.0
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_uo3ka"]
+noise_type = 2
+frequency = 0.0054
+fractal_type = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7wtly"]
+noise = SubResource("FastNoiseLite_uo3ka")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u88am"]
+shader = ExtResource("6_7oujp")
+shader_parameter/texturaRuido = SubResource("NoiseTexture2D_7wtly")
+shader_parameter/ativarRuido = true
+shader_parameter/animar = true
+shader_parameter/suavidade = 0.60000000894072
+shader_parameter/velocidadeAndar = 0.47999998927104
+shader_parameter/corRuido = Color(0.9490196, 0.6117647, 0, 1)
+shader_parameter/corMain = Color(1, 0.101960786, 0, 1)
+shader_parameter/limite = 0.68999998457712
+shader_parameter/direcaoFogo = Vector2(1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_rbeyu"]
+noise_type = 2
+frequency = 0.0054
+fractal_type = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_noolo"]
+noise = SubResource("FastNoiseLite_rbeyu")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_okue2"]
+shader = ExtResource("6_7oujp")
+shader_parameter/texturaRuido = SubResource("NoiseTexture2D_noolo")
+shader_parameter/ativarRuido = true
+shader_parameter/animar = true
+shader_parameter/suavidade = 0.60000000894072
+shader_parameter/velocidadeAndar = 0.47999998927104
+shader_parameter/corRuido = Color(0.9490196, 0.6117647, 0, 1)
+shader_parameter/corMain = Color(1, 0.101960786, 0, 1)
+shader_parameter/limite = 0.68999998457712
+shader_parameter/direcaoFogo = Vector2(1, 1)
 
 [sub_resource type="Gradient" id="Gradient_7oujp"]
 offsets = PackedFloat32Array(0.010638298, 0.3611111)
@@ -47,16 +89,17 @@ forma = SubResource("CircleShape2D_combustao")
 dano = 10.0
 
 [node name="visual" parent="." unique_id=1893627947 instance=ExtResource("4_visual")]
-visible = false
 z_index = 0
 
 [node name="TimerAtaque" parent="." unique_id=2730897 instance=ExtResource("5_timer")]
 
 [node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=84377683]
-material = ExtResource("6_7oujp")
+material = SubResource("ShaderMaterial_u88am")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="CanvasGroup" unique_id=1541492397]
+visible = false
 z_index = -5
+material = SubResource("ShaderMaterial_okue2")
 amount = 16
 texture = SubResource("GradientTexture2D_uo3ka")
 process_material = SubResource("ParticleProcessMaterial_pbhgb")
