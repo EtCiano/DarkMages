@@ -17,8 +17,7 @@ func conjurar(posicaoPersonagem: Vector2, mousePos: Vector2) -> void:
 	global_position = ataque.ponto_a_distancia(posicaoPersonagem, anguloMouse, distancia)
 	$hitbox.definir()
 	ataque.aplicar_dano($hitbox)
-	acender()
-
-func acender() -> void:
+	
+	$visual.material.set_shader_parameter("angulo", randi_range(0, 360))
 	$visual.material.get_shader_parameter("texturaRuido").noise.seed = randi()
 	$visual/AnimationPlayer.play("default")

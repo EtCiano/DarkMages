@@ -4,7 +4,7 @@ const pixelSize: float = 4.0
 
 const damageShower = preload("res://scenes/damage_shower.tscn")
 
-const debug: bool = true
+const debug: bool = false
 
 enum classe {FEITICEIRO, CLERIGO, OCULTISTA}
 enum entidade {PLAYER, INIMIGO}

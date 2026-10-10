@@ -1,6 +1,10 @@
-res://shaders/fogo_particula.tres
+res://scenes/ataques/combustao/combustao.gd
 res://scenes/ataques/combustao/combustao.tscn
 res://shaders/shaderFogo.tres
 res://shaders/shaderFogoPaticula.tres
 res://shaders/fogo_particula.gdshader
+res://shaders/particulaVazia.gdshader
+res://shaders/fogo.gdshader
 res://fogoShaderParticula.tres
+res://shaders/fogo_semente.gdshader
+res://singletons/global.gd
